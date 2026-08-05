@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Program Status Document",
+  "description": "Schema for status update documents rendered by status.html template",
+  "type": "object",
+  "required": ["pages"],
+  "properties": {
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["template", "data"],
+        "properties": {
+          "template": {
+            "type": "string",
+            "description": "Template filename (e.g., status.html)",
+            "pattern": "^.*\\.html$"
+          },
+          "data": {
+            "type": "object",
+            "required": ["programName", "weekEnding", "pageNumber", "workstreams"],
+            "properties": {
+              "programName": {
+                "type": "string",
+                "description": "Name of the program",
+                "minLength": 1
+              },
+              "programIconUrl": {
+                "type": "string",
+                "description": "Optional URL to program icon image"
+              },
+              "weekEnding": {
+                "type": "string",
+                "description": "Week ending date for this status update",
+                "minLength": 1
+              },
+              "pageNumber": {
+                "type": "integer",
+                "description": "Page number (1-based)",
+                "minimum": 1
+              },
+              "workstreams": {
+                "type": "array",
+                "description": "List of workstreams with accomplishments and next steps",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": ["name", "accomplishments", "nextSteps"],
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "Workstream name",
+                      "minLength": 1
+                    },
+                    "accomplishments": {
+                      "type": "array",
+                      "description": "List of accomplishments for this workstream",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "nextSteps": {
+                      "type": "array",
+                      "description": "List of next steps for this workstream",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

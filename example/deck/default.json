@@ -1,0 +1,51 @@
+{
+  "schema": "status.schema.json",
+  "pages": [
+    {
+      "template": "status.html",
+      "data": {
+        "programName": "Lorem Ipsum Dolor",
+        "programIconUrl": "",
+        "weekEnding": "Lorem ipsum dolor sit amet",
+        "pageNumber": 1,
+        "workstreams": [
+          {
+            "name": "Lorem Ipsum",
+            "accomplishments": [
+              "Lorem ipsum dolor sit amet consectetur"
+            ],
+            "nextSteps": [
+              "Aliqua enim ad minim veniam quis",
+              "Nostrud exercitation ullamco laboris"
+            ]
+          },
+          {
+            "name": "Dolor Sit Amet",
+            "accomplishments": [
+              "Consequat mauris nunc congue nisi",
+              "Vitae elementum curabitur vitae nunc"
+            ],
+            "nextSteps": [
+              "Ornare suspendisse sed nisi lacus sed",
+              "Viverra aliquet eget sit amet tellus",
+              "Cras semper auctor neque vitae tempus"
+            ]
+          },
+          {
+            "name": "Consectetur Adipiscing",
+            "accomplishments": [
+              "Quam elementum pulvinar etiam non",
+              "Quam lacus suspendisse faucibus interdum",
+              "Posuere sollicitudin aliquam ultrices"
+            ],
+            "nextSteps": [
+              "Sagittis orci a scelerisque purus",
+              "Semper viverra nam libero justo laoreet",
+              "Sit amet cursus sit amet dictum"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
